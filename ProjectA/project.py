@@ -97,6 +97,7 @@ def check_valid_placement(grid, shape, pos, color):
                     return False
 
     return True
+    
 
 def get_neighbor_states(game, placedShapes):
     neighbors = []
@@ -143,6 +144,28 @@ def get_neighbor_states(game, placedShapes):
     
     return neighbors
 
+def find_best_neighbor(game, current_grid, current_placedShapes):
+    # Find the best neighbor
+    neighbors = get_neighbor_states(game, current_placedShapes)
+    best_neighbor = None
+    best_score = getObjectiveValue(current_grid, current_placedShapes)
+    #print("Curr score:", best_score)
+    if game.checkGrid(current_grid):
+        #print("Correct grid")
+        return best_neighbor
+    temp_placedShapes = current_placedShapes.copy()
+    for neighbor_shapePos, neighbor_shapeInd, neighbor_colorInd, neighbor_grid, neighbor_placedShapes, neighbor_done in neighbors:
+        #print("Neighbor...", neighbor_placedShapes)
+        neighbor_score = getObjectiveValue(neighbor_grid, neighbor_placedShapes)
+        #print("Neighbor score:", neighbor_score)
+        if neighbor_score < best_score or (neighbor_score==best_score and len(neighbor_placedShapes)<len(temp_placedShapes)) or (neighbor_score == best_score and neighbor_colorInd in used_colors) or (neighbor_score == best_score and neighbor_shapeInd in used_shapes):
+            best_neighbor = (neighbor_shapePos, neighbor_shapeInd, neighbor_colorInd, neighbor_grid, neighbor_placedShapes, neighbor_done)
+            best_score = neighbor_score
+            temp_placedShapes = neighbor_placedShapes.copy()
+    return best_neighbor
+
+
+# Original Code
 def hill_climbing(game, grid, placedShapes):
     # current_grid = grid.copy()
     # current_placedShapes = placedShapes.copy()
@@ -151,29 +174,9 @@ def hill_climbing(game, grid, placedShapes):
     while True:
         # Generate neighboring states
         #print("Current grid", current_grid)
-        neighbors = get_neighbor_states(game, current_placedShapes)
         #print("Neighbors", len(neighbors))
         
-        # Find the best neighbor
-        best_neighbor = None
-        best_score = getObjectiveValue(current_grid, current_placedShapes)
-        #print("Curr score:", best_score)
-        if game.checkGrid(current_grid):
-            #print("Correct grid")
-            break
-        temp_placedShapes = current_placedShapes.copy()
-        for neighbor_shapePos, neighbor_shapeInd, neighbor_colorInd, neighbor_grid, neighbor_placedShapes, neighbor_done in neighbors:
-            #print("Neighbor...", neighbor_placedShapes)
-            neighbor_score = getObjectiveValue(neighbor_grid, neighbor_placedShapes)
-            #print("Neighbor score:", neighbor_score)
-            if neighbor_score < best_score or (neighbor_score==best_score and len(neighbor_placedShapes)<len(temp_placedShapes)) or (neighbor_score == best_score and neighbor_colorInd in used_colors) or (neighbor_score == best_score and neighbor_shapeInd in used_shapes):
-                best_neighbor = (neighbor_shapePos, neighbor_shapeInd, neighbor_colorInd, neighbor_grid, neighbor_placedShapes, neighbor_done)
-                best_score = neighbor_score
-                temp_placedShapes = neighbor_placedShapes.copy()
-            
-        #print("Best neighbor:", best_neighbor)
-        # If no better neighbor is found, stop
-
+        best_neighbor = find_best_neighbor(game, current_grid, current_placedShapes)
         if best_neighbor is None:
             break
 
@@ -201,6 +204,37 @@ def hill_climbing(game, grid, placedShapes):
             break
     
     return current_grid, current_placedShapes
+
+def beam_search(game, grid, placedShapes, beam_width=3):
+    # Initialize with current state
+    _, _, _, current_grid, current_placedShapes, done = game.execute('export')
+    beam = [(score(current_grid, current_placedShapes),
+             current_grid, current_placedShapes)]
+    
+    while not done:
+        candidates = []
+        
+        for _, grid, placedShapes in beam:
+            neighbors = generate_neighbors(game, grid, placedShapes)
+            for n in neighbors:
+                score_val = score(n.grid, n.placedShapes)
+                candidates.append((score_val, n.grid, n.placedShapes, n.actions))
+        
+        if not candidates:
+            break
+        
+        # Select top-k
+        candidates.sort(key=lambda x: x[0], reverse=True)
+        beam = candidates[:beam_width]
+        
+        # Execute the best candidate’s actions in the game
+        best = beam[0]
+        for action in best[3]:
+            game.execute(action)
+        _, _, _, current_grid, current_placedShapes, done = game.execute('export')
+    
+    return current_grid, current_placedShapes
+
 
 def calculateUsedColors(game, grid):
     """
