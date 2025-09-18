@@ -97,51 +97,63 @@ def check_valid_placement(grid, shape, pos, color):
                     return False
 
     return True
-    
 
 def get_neighbor_states(game, placedShapes):
     neighbors = []
-    shapePos, currentShapeIndex, _, grid, placedShapes, done = game.execute('export')
+    shapePos, currentShapeIndex, currentColorIndex, grid, placedShapes, done = game.execute('export')
 
-    while currentShapeIndex != 0:
-        game.execute('switchshape')
-        _, currentShapeIndex, _, _, _, _ = game.execute('export')
+    if not np.any(grid == -1):
+        return neighbors
+
+    if currentShapeIndex != 0:
+        steps = (-currentShapeIndex) % len(game.shapes)
+        for _ in range(steps):
+            game.execute('switchshape')
+        currentShapeIndex = 0
+
     if grid[shapePos[1], shapePos[0]] != -1:
         i, j = np.argwhere(grid == -1)[0]
-        while done or shapePos != [j,i]:
-            #print("try", shapePos, [j,i])
-            if shapePos[0] < j:
-                game.execute('right')
-            elif shapePos[0] > j:
-                game.execute('left')
-            if shapePos[1] < i:
-                game.execute('down')
-            elif shapePos[1] > i:
-                game.execute('up')
-            shapePos, _, _, _, _, _ = game.execute('export')
-        #print("ShapePos New", shapePos)
-    
-    for shape_index in range(len(game.shapes)):
-        _, currentShapeIndex, currentColorIndex, _, _, _ = game.execute('export')
-        while shape_index != currentShapeIndex:
-            game.execute('switchshape')
-            shapePos, currentShapeIndex, _, _, _, _ = game.execute('export')
+        dx, dy = j - shapePos[0], i - shapePos[1]
+        for _ in range(abs(dx)):
+            game.execute('right' if dx > 0 else 'left')
+        for _ in range(abs(dy)):
+            game.execute('down' if dy > 0 else 'up')
+        shapePos, _, _, grid, placedShapes, done = game.execute('export')
+
+    shape_sizes = [(idx, np.sum(game.shapes[idx] != 0)) for idx in range(len(game.shapes))]
+    shape_sizes.sort(key=lambda x: x[1], reverse=True)
+
+    for shape_index, _ in shape_sizes:
+        if shape_index != currentShapeIndex:
+            steps = (shape_index - currentShapeIndex) % len(game.shapes)
+            for _ in range(steps):
+                game.execute('switchshape')
+            currentShapeIndex = shape_index
+
+        placed_any = False
         for color_index in range(4):
             if check_valid_placement(grid, game.shapes[currentShapeIndex], shapePos, color_index):
-                #print(currentShapeIndex, shapePos, color_index)
-                while color_index != currentColorIndex:
-                    game.execute('switchcolor')
-                    _, _, currentColorIndex, _, _, _ = game.execute('export')
-                shapePos_new, currentShapeIndex_new, currentColorIndex_new, grid_new, placedShapes_new, done_new = game.execute('place')
-                #print("Place", placedShapes_new)
-                # neighbors.append((grid_new.copy(), placedShapes_new.copy()))
-                neighbors.append((shapePos_new.copy(), currentShapeIndex_new, currentColorIndex_new, grid_new.copy(), placedShapes_new.copy(), done_new))
+                if color_index != currentColorIndex:
+                    steps = (color_index - currentColorIndex) % 4
+                    for _ in range(steps):
+                        game.execute('switchcolor')
+                    currentColorIndex = color_index
 
-                #print("Neighbor", neighbors)
+                shapePos_new, shapeIdx_new, colorIdx_new, grid_new, placed_new, done_new = game.execute('place')
+                neighbors.append((
+                    shapePos_new,
+                    shapeIdx_new,
+                    colorIdx_new,
+                    grid_new.copy(),
+                    placed_new.copy(),
+                    done_new
+                ))
                 game.execute('undo')
-                #print("Undo")
-                #print("Neighbor", neighbors)
-    
+                placed_any = True
+
+        if placed_any:
+            break 
+
     return neighbors
 
 def find_best_neighbor(game, current_grid, current_placedShapes):
@@ -164,17 +176,10 @@ def find_best_neighbor(game, current_grid, current_placedShapes):
             temp_placedShapes = neighbor_placedShapes.copy()
     return best_neighbor
 
-
-# Original Code
 def hill_climbing(game, grid, placedShapes):
-    # current_grid = grid.copy()
-    # current_placedShapes = placedShapes.copy()
     _, _, _, current_grid, current_placedShapes, done = game.execute('export') 
 
     while True:
-        # Generate neighboring states
-        #print("Current grid", current_grid)
-        #print("Neighbors", len(neighbors))
         
         best_neighbor = find_best_neighbor(game, current_grid, current_placedShapes)
         if best_neighbor is None:
@@ -204,37 +209,6 @@ def hill_climbing(game, grid, placedShapes):
             break
     
     return current_grid, current_placedShapes
-
-def beam_search(game, grid, placedShapes, beam_width=3):
-    # Initialize with current state
-    _, _, _, current_grid, current_placedShapes, done = game.execute('export')
-    beam = [(score(current_grid, current_placedShapes),
-             current_grid, current_placedShapes)]
-    
-    while not done:
-        candidates = []
-        
-        for _, grid, placedShapes in beam:
-            neighbors = generate_neighbors(game, grid, placedShapes)
-            for n in neighbors:
-                score_val = score(n.grid, n.placedShapes)
-                candidates.append((score_val, n.grid, n.placedShapes, n.actions))
-        
-        if not candidates:
-            break
-        
-        # Select top-k
-        candidates.sort(key=lambda x: x[0], reverse=True)
-        beam = candidates[:beam_width]
-        
-        # Execute the best candidate’s actions in the game
-        best = beam[0]
-        for action in best[3]:
-            game.execute(action)
-        _, _, _, current_grid, current_placedShapes, done = game.execute('export')
-    
-    return current_grid, current_placedShapes
-
 
 def calculateUsedColors(game, grid):
     """
