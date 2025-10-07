@@ -1,0 +1,573 @@
+{
+"recipe_name": "cottage-cheese-chocolate-chip-cookies",
+"food_role": [
+"Dessert",
+"Snack"
+],
+"data_provenance": {
+"source_url": "",
+"last_system_access": ""
+},
+"macronutrients": {},
+"ingredients": [
+{
+"name": "all purpose flour",
+"quantity": {
+"measure": "2.5",
+"unit": "cups",
+"gram_weight": "300"
+},
+"allergies": {
+"id": "",
+"category": [
+"gluten"
+],
+"ref": [],
+"details": ""
+},
+"alternative": "",
+"quality_characteristic": "",
+"image": ""
+},
+{
+"name": "baking soda",
+"quantity": {
+"measure": "1",
+"unit": "tsp",
+"gram_weight": "5"
+},
+"allergies": {
+"id": "",
+"category": [],
+"ref": [],
+"details": ""
+},
+"alternative": "",
+"quality_characteristic": "",
+"image": ""
+},
+{
+"name": "salt",
+"quantity": {
+"measure": "0.5",
+"unit": "tsp",
+"gram_weight": "2"
+},
+"allergies": {
+"id": "",
+"category": [],
+"ref": [],
+"details": ""
+},
+"alternative": "",
+"quality_characteristic": "",
+"image": ""
+},
+{
+"name": "unsalted butter",
+"quantity": {
+"measure": "0.5",
+"unit": "cup",
+"gram_weight": "113"
+},
+"allergies": {
+"id": "",
+"category": [
+"dairy"
+],
+"ref": [],
+"details": ""
+},
+"alternative": "salted butter (reduce added salt)",
+"quality_characteristic": "softened",
+"image": ""
+},
+{
+"name": "brown sugar",
+"quantity": {
+"measure": "0.333",
+"unit": "cup",
+"gram_weight": "65"
+},
+"allergies": {
+"id": "",
+"category": [],
+"ref": [],
+"details": ""
+},
+"alternative": "dark or light brown sugar",
+"quality_characteristic": "packed",
+"image": ""
+},
+{
+"name": "white granulated sugar",
+"quantity": {
+"measure": "0.333",
+"unit": "cup",
+"gram_weight": "75"
+},
+"allergies": {
+"id": "",
+"category": [],
+"ref": [],
+"details": ""
+},
+"alternative": "",
+"quality_characteristic": "",
+"image": ""
+},
+{
+"name": "vanilla extract",
+"quantity": {
+"measure": "2",
+"unit": "tsp",
+"gram_weight": "10"
+},
+"allergies": {
+"id": "",
+"category": [],
+"ref": [],
+"details": ""
+},
+"alternative": "",
+"quality_characteristic": "pure vanilla preferred",
+"image": ""
+},
+{
+"name": "large egg",
+"quantity": {
+"measure": "1",
+"unit": "piece"
+},
+"allergies": {
+"id": "",
+"category": [
+"eggs"
+],
+"ref": [],
+"details": ""
+},
+"alternative": "",
+"quality_characteristic": "room temperature",
+"image": ""
+},
+{
+"name": "cottage cheese (blended until smooth)",
+"quantity": {
+"measure": "1",
+"unit": "cup",
+"gram_weight": "225"
+},
+"allergies": {
+"id": "",
+"category": [
+"dairy"
+],
+"ref": [],
+"details": ""
+},
+"alternative": "ricotta (if texture adjusted)",
+"quality_characteristic": "blended smooth, no large curds",
+"image": ""
+},
+{
+"name": "chocolate chips",
+"quantity": {
+"measure": "1",
+"unit": "cup",
+"gram_weight": "170"
+},
+"allergies": {
+"id": "",
+"category": [
+"may contain traces of nuts"
+],
+"ref": [],
+"details": ""
+},
+"alternative": "chopped chocolate",
+"quality_characteristic": "",
+"image": ""
+}
+],
+"equipment": [
+"Bowl",
+"Spoon",
+"Whisk",
+"Mixer (optional)",
+"Blender",
+"Sheet pan or cookie sheet",
+"Silicone baking mat or parchment paper",
+"Cookie scoop or two spoons",
+"Wire cooling rack"
+],
+"hasDairy": true,
+"hasMeat": false,
+"hasNuts": false,
+"prep_time": "15 minutes",
+"cook_time": "10-14 minutes",
+"serves": "24",
+"instructions": [
+{
+"original_text": "Preheat the oven to 350F/176C.",
+"input_condition": [],
+"task": [
+{
+"action_name": "Preheat oven to 350F (176C).",
+"output_quality": [
+"Oven set and stable at 350°F / 176°C"
+],
+"background_knowledge": {
+"tool": [
+"oven"
+],
+"failure": [
+"oven not preheated",
+"wrong temperature scale used (F vs C)"
+]
+}
+}
+],
+"output_condition": [
+"oven_preheated_350F"
+],
+"modality": {
+"image": [],
+"video": ""
+}
+},
+{
+"original_text": "Add the cottage cheese to a blender and blend until smooth and there are no large chunks of cheese.",
+"input_condition": [
+"have_cottage_cheese",
+"have_blender"
+],
+"task": [
+{
+"action_name": "Blend cottage cheese until smooth.",
+"output_quality": [
+"No large curds or chunks remain; texture is smooth and pourable"
+],
+"background_knowledge": {
+"tool": [
+"blender"
+],
+"failure": [
+"large curds remain",
+"over-blending causing separation (rare)"
+]
+}
+}
+],
+"output_condition": [
+"have_blended_cottage_cheese"
+],
+"modality": {
+"image": [],
+"video": ""
+}
+},
+{
+"original_text": "Add the flour, salt, and baking soda to a medium bowl and whisk. You can also put those ingredients in a sifter and sift them if you like instead.",
+"input_condition": [
+"have_flour",
+"have_salt",
+"have_baking_soda",
+"have_bowl"
+],
+"task": [
+{
+"action_name": "Combine dry ingredients in a bowl and whisk (or sift).",
+"output_quality": [
+"Flour, salt and baking soda are evenly combined and aerated"
+],
+"background_knowledge": {
+"tool": [
+"whisk",
+"sifter (optional)"
+],
+"failure": [
+"uneven distribution of salt or leavening",
+"clumps of flour remain"
+]
+}
+}
+],
+"output_condition": [
+"have_whisked_dry_mixture"
+],
+"modality": {
+"image": [],
+"video": ""
+}
+},
+{
+"original_text": "Add the softened butter, brown sugar, and white granulated sugar to a large bowl and mix with a spoon or an electric mixer. Then add the vanilla extract and egg and mix until combined.",
+"input_condition": [
+"have_unsalted_butter_softened",
+"have_brown_sugar",
+"have_white_granulated_sugar",
+"have_vanilla",
+"have_egg",
+"have_large_bowl"
+],
+"task": [
+{
+"action_name": "Cream butter and sugars together.",
+"output_quality": [
+"Mixture is smooth, slightly fluffy, sugars incorporated"
+],
+"background_knowledge": {
+"tool": [
+"spoon or electric mixer"
+],
+"failure": [
+"butter too cold to mix",
+"overmixed causing greasy texture"
+]
+}
+},
+{
+"action_name": "Add vanilla and egg and mix until combined.",
+"output_quality": [
+"Homogeneous wet mixture with no visible separate egg whites or yolk"
+],
+"background_knowledge": {
+"tool": [
+"spoon or electric mixer"
+],
+"failure": [
+"egg not fully incorporated",
+"curdling if ingredients too cold/hot"
+]
+}
+}
+],
+"output_condition": [
+"have_wet_mixture"
+],
+"modality": {
+"image": [],
+"video": ""
+}
+},
+{
+"original_text": "Next, add the blended cottage cheese and mix until combined.",
+"input_condition": [
+"have_wet_mixture",
+"have_blended_cottage_cheese"
+],
+"task": [
+{
+"action_name": "Fold blended cottage cheese into wet mixture.",
+"output_quality": [
+"Mixture is uniform and slightly creamy from cottage cheese"
+],
+"background_knowledge": {
+"tool": [
+"spoon or mixer"
+],
+"failure": [
+"large pockets of cottage cheese remain",
+"overmixing breaks texture"
+]
+}
+}
+],
+"output_condition": [
+"have_combined_wet_cottage_cheese_mixture"
+],
+"modality": {
+"image": [],
+"video": ""
+}
+},
+{
+"original_text": "Add the chocolate chips and stir those in then add the flour mixture a little at a time until all combined and you are left with the cookie dough.",
+"input_condition": [
+"have_combined_wet_cottage_cheese_mixture",
+"have_whisked_dry_mixture",
+"have_chocolate_chips"
+],
+"task": [
+{
+"action_name": "Stir in chocolate chips.",
+"output_quality": [
+"Chocolate chips distributed evenly throughout the wet mixture"
+],
+"background_knowledge": {
+"tool": [
+"spoon"
+],
+"failure": [
+"chips clump together",
+"uneven distribution"
+]
+}
+},
+{
+"action_name": "Add dry ingredients gradually and mix until combined.",
+"output_quality": [
+"Dough formed, no visible streaks of flour, slightly soft but scoopable"
+],
+"background_knowledge": {
+"tool": [
+"spoon or mixer"
+],
+"failure": [
+"overmixing producing tough cookies",
+"undermixing leaving dry flour pockets"
+]
+}
+}
+],
+"output_condition": [
+"have_cookie_dough"
+],
+"modality": {
+"image": [],
+"video": ""
+}
+},
+{
+"original_text": "Use a cookie scoop or two spoons and place cookie dough on a sheet pan lined with parchment paper or a silicone baking mat. You should be able to get 12 of them on there. Space them about 2 inches apart.",
+"input_condition": [
+"have_cookie_dough",
+"have_sheet_pan",
+"have_parchment_or_silicone_mat"
+],
+"task": [
+{
+"action_name": "Portion cookie dough onto prepared sheet pan.",
+"output_quality": [
+"Approximately 12 scoops per pan, dough mounds spaced about 2 inches apart"
+],
+"background_knowledge": {
+"tool": [
+"cookie scoop or two spoons",
+"sheet pan",
+"parchment or silicone mat"
+],
+"failure": [
+"dough mounds too close causing cookies to merge",
+"uneven scoop sizes"
+]
+}
+}
+],
+"output_condition": [
+"have_pan_ready_with_dough"
+],
+"modality": {
+"image": [],
+"video": ""
+}
+},
+{
+"original_text": "Bake at 350F/176C for 10 to 14 minutes until lightly golden brown.",
+"input_condition": [
+"have_pan_ready_with_dough",
+"oven_preheated_350F"
+],
+"task": [
+{
+"action_name": "Bake cookies at 350°F / 176°C for 10–14 minutes.",
+"output_quality": [
+"Edges are lightly golden brown; centers set but still soft"
+],
+"background_knowledge": {
+"tool": [
+"oven",
+"timer"
+],
+"failure": [
+"overbaked (too dark edges)",
+"underbaked (raw centers)"
+]
+}
+}
+],
+"output_condition": [
+"have_baked_cookies"
+],
+"modality": {
+"image": [],
+"video": ""
+}
+},
+{
+"original_text": "Allow the cookies to cool on the pan for 2 to 3 minutes then transfer to a wire cookie rack to cool completely.",
+"input_condition": [
+"have_baked_cookies",
+"have_wire_rack"
+],
+"task": [
+{
+"action_name": "Cool cookies on pan for 2–3 minutes.",
+"output_quality": [
+"Cookies firm enough to transfer without falling apart"
+],
+"background_knowledge": {
+"tool": [
+"wire cooling rack"
+],
+"failure": [
+"transferring too early causing deformation"
+]
+}
+},
+{
+"action_name": "Transfer cookies to wire rack to cool completely.",
+"output_quality": [
+"Cookies cooled to room temperature"
+],
+"background_knowledge": {
+"tool": [
+"spatula",
+"wire rack"
+],
+"failure": [
+"cookies remain warm and soggy if not cooled"
+]
+}
+}
+],
+"output_condition": [
+"have_cooled_cookies",
+"recipe_complete"
+],
+"modality": {
+"image": [],
+"video": ""
+}
+},
+{
+"original_text": "Enjoy! This recipe will make around 24 total cookies.",
+"input_condition": [
+"recipe_complete"
+],
+"task": [
+{
+"action_name": "Serve or store cookies.",
+"output_quality": [
+"Approximately 24 cookies total (two pans of 12 each)",
+"Cookies stored in an airtight container remain fresh"
+],
+"background_knowledge": {
+"tool": [],
+"failure": [
+"improper storage causing staleness"
+]
+}
+}
+],
+"output_condition": [
+"have_served_or_stored_cookies"
+],
+"modality": {
+"image": [],
+"video": ""
+}
+}
+]
+}

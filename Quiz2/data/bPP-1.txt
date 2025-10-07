@@ -1,0 +1,46 @@
+Convert only the Ingredients to R3-JSON Format
+Ensure:
+Include all required keys: recipe_name, data_provenance, macronutrients, ingredients, instructions.
+data_provenance must include a retrieved_date = today’s date (YYYY-MM-DD).
+Output only JSON
+
+Recipe:
+Ingredients:
+
+    2 1/2 cups of all purpose flour (300g)
+    1 tsp of baking soda (5g)
+    1/2 tsp of salt (2g)
+    1/2 cup of unsalted butter (113g)
+    1/3 cup of brown sugar (65g)
+    1/3 cup of white granulated sugar (75g)
+    2 tsp of vanilla extract (10g)
+    1 large egg
+    1 cup of cottage cheese, blended (225g)
+    1 cup of chocolate chips (170g)
+
+Equipment:
+
+    Bowl
+    Spoon
+    Whisk
+    Mixer, optional
+    Sheet pan or cookie sheet
+    Silicone baking mat or parchment paper
+
+Instructions:
+
+Preheat the oven to 350F/176C. Add the cottage cheese to a blender and blend until smooth and there are no large chunks of cheese.
+
+Add the flour, salt, and baking soda to a medium bowl and whisk. You can also put those ingredients in a sifter and sift them if you like instead.
+
+Add the softened butter, brown sugar, and white granulated sugar to a large bowl and mix with a spoon or an electric mixer. Then add the vanilla extract and egg and mix until combined.
+
+Next, add the blended cottage cheese and mix until combined.
+
+Add the chocolate chips and stir those in then add the flour mixture a little at a time until all combined and you are left with the cookie dough.
+
+Use a cookie scoop or two spoons and place cookie dough on a sheet pan lined with parchment paper or a silicone baking mat. You should be able to get 12 of them on there. Space them about 2 inches apart.
+
+Bake at 350F/176C for 10 to 14 minutes until lightly golden brown. Allow the cookies to cool on the pan for 2 to 3 minutes then transfer to a wire cookie rack to cool completely. Enjoy!
+
+This recipe will make around 24 total cookies.

@@ -1,0 +1,55 @@
+{
+  "recipe_name": "Apple Crumble Muffins",
+  "data_provenance": {
+    "retrieved_date": "2025-10-07",
+    "source": "User-provided recipe text"
+  },
+  "macronutrients": {
+    "estimated_per_muffin": {
+      "calories": 250,
+      "protein_g": 3,
+      "carbohydrates_g": 35,
+      "fat_g": 11
+    }
+  },
+  "ingredients": {
+    "batter": [
+      {"item": "All-purpose flour", "quantity": "1 1/2 cups", "weight_g": 188},
+      {"item": "Granulated sugar", "quantity": "3/4 cup", "weight_g": 150},
+      {"item": "Salt", "quantity": "1/2 tsp", "weight_g": 2},
+      {"item": "Baking powder", "quantity": "2 tsp", "weight_g": 8},
+      {"item": "Cinnamon", "quantity": "1/2 tsp", "weight_g": 1},
+      {"item": "Nutmeg", "quantity": "1/2 tsp", "weight_g": 1},
+      {"item": "Canola oil", "quantity": "1/3 cup", "weight_g": 75},
+      {"item": "Egg", "quantity": "1 large"},
+      {"item": "Milk", "quantity": "1/3 cup", "volume_ml": 78},
+      {"item": "Vanilla extract (optional)", "quantity": "1/2 tsp", "volume_ml": 2},
+      {"item": "Apple, diced", "quantity": "1 large"}
+    ],
+    "crumble_topping": [
+      {"item": "Granulated sugar", "quantity": "1/2 cup", "weight_g": 100},
+      {"item": "All-purpose flour", "quantity": "1/3 cup", "weight_g": 42},
+      {"item": "Butter, softened", "quantity": "1/4 cup", "weight_g": 57},
+      {"item": "Ground cinnamon", "quantity": "1 tsp", "weight_g": 4}
+    ],
+    "tools_equipment": [
+      "Whisk",
+      "Large mixing bowl",
+      "Knife",
+      "Cutting board",
+      "Peeler",
+      "Muffin pan"
+    ]
+  },
+  "instructions": [
+    "Preheat the oven to 400°F (205°C).",
+    "In a medium bowl, whisk together the flour, sugar, salt, baking powder, cinnamon, and nutmeg.",
+    "In a large bowl, whisk together the egg, oil, milk, and vanilla extract. Add the dry mixture and stir with a wooden or silicone spoon. If too thick, add 1–2 Tbsp of milk.",
+    "Peel (optional) and dice the apple into small chunks. Fold them into the batter.",
+    "Prepare the crumble topping: combine butter, sugar, flour, and cinnamon in a medium bowl. Mix with a fork until small clumps form and no dry bits remain.",
+    "Scoop the batter evenly into a 12-cup muffin pan lined with paper cups. Sprinkle crumble topping evenly over each muffin.",
+    "Bake for 20–28 minutes, or until golden brown and a toothpick inserted in the center comes out clean (about 25 minutes in most ovens).",
+    "Cool muffins in the pan for 5 minutes, then transfer to a wire rack to cool completely.",
+    "Enjoy!"
+  ]
+}

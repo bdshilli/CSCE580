@@ -5,7 +5,7 @@ _ // This file has a template for recording testcases for chatbots_
 TC-R3
 
 ### 2. TC-name: 
-Using LLMs for a Task
+Using LLMs to create R3-JSON files
 
 ### 3. TC-objective: 
 To evaluate if an LLM converts plain-text recipies into valid R3-style json objects
@@ -15,7 +15,7 @@ Apple-Crumble Muffins Recipe
 Cottage-Cheese Chocolate Chip Cookies Recipe
 
 ### 5. TC-reference-output: 
-
+https://github.com/biplav-s/course-ai-f25/blob/main/sample-code/future/llm-recipe-conversion/data/example_r3_egg-drop-chicken-noodle-soup.json
 
 ### 6. TC-harm-risk-info: 
 _ // Risk information that the test case may be associated with. Also mention harm categories from the book: HC1-incorrect-info, HC2-opinion-manipulation, HC3-unstable-output, HC4-uncooperative-ai. Or, use HC5 for others. _
