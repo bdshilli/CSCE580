@@ -1,0 +1,104 @@
+{
+  "recipe_name": "Apple Muffins with Crumble Topping",
+  "data_provenance": {
+    "retrieved_date": "2025-10-07"
+  },
+  "macronutrients": {},
+  "ingredients": {
+    "Batter": [
+      {
+        "ingredient_name": "Flour, all-purpose",
+        "quantity": "1 1/2 cups",
+        "measurement": "cup",
+        "weight_g": 188
+      },
+      {
+        "ingredient_name": "Granulated sugar",
+        "quantity": "3/4 cup",
+        "measurement": "cup",
+        "weight_g": 150
+      },
+      {
+        "ingredient_name": "Salt",
+        "quantity": "1/2 tsp",
+        "measurement": "tsp",
+        "weight_g": 2
+      },
+      {
+        "ingredient_name": "Baking powder",
+        "quantity": "2 tsp",
+        "measurement": "tsp",
+        "weight_g": 8
+      },
+      {
+        "ingredient_name": "Cinnamon",
+        "quantity": "1/2 tsp",
+        "measurement": "tsp",
+        "weight_g": 1
+      },
+      {
+        "ingredient_name": "Nutmeg",
+        "quantity": "1/2 tsp",
+        "measurement": "tsp",
+        "weight_g": 1
+      },
+      {
+        "ingredient_name": "Canola oil",
+        "quantity": "1/3 cup",
+        "measurement": "cup",
+        "weight_g": 75
+      },
+      {
+        "ingredient_name": "Egg, large",
+        "quantity": "1",
+        "measurement": "unit",
+        "weight_g": null
+      },
+      {
+        "ingredient_name": "Milk",
+        "quantity": "1/3 cup",
+        "measurement": "cup",
+        "volume_ml": 78
+      },
+      {
+        "ingredient_name": "Vanilla extract (optional)",
+        "quantity": "1/2 tsp",
+        "measurement": "tsp",
+        "volume_ml": 2
+      },
+      {
+        "ingredient_name": "Apple, large (diced into small chunks)",
+        "quantity": "1",
+        "measurement": "unit",
+        "weight_g": null
+      }
+    ],
+    "Crumble Topping": [
+      {
+        "ingredient_name": "Granulated sugar",
+        "quantity": "1/2 cup",
+        "measurement": "cup",
+        "weight_g": 100
+      },
+      {
+        "ingredient_name": "All-purpose flour",
+        "quantity": "1/3 cup",
+        "measurement": "cup",
+        "weight_g": 42
+      },
+      {
+        "ingredient_name": "Butter, softened",
+        "quantity": "1/4 cup",
+        "measurement": "cup",
+        "weight_g": 57
+      },
+      {
+        "ingredient_name": "Ground cinnamon",
+        "quantity": "1 tsp",
+        "measurement": "tsp",
+        "weight_g": 4
+      }
+    ]
+  },
+  "instructions": []
+}

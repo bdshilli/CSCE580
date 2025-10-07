@@ -1,0 +1,698 @@
+{
+"recipe_name": "apple-crumble-muffins",
+"food_role": [
+"Breakfast",
+"Snack",
+"Dessert"
+],
+"data_provenance": {
+"source_url": "",
+"last_system_access": "2025-10-07 00:00:00"
+},
+"macronutrients": {},
+"ingredients": [
+{
+"name": "all-purpose flour (batter)",
+"quantity": {
+"measure": "1.5",
+"unit": "cups"
+},
+"notes": "188 g",
+"allergies": {
+"id": "",
+"category": [
+"gluten"
+],
+"ref": [],
+"details": ""
+},
+"alternative": "",
+"quality_characteristic": "",
+"image": ""
+},
+{
+"name": "granulated sugar (batter)",
+"quantity": {
+"measure": "0.75",
+"unit": "cup"
+},
+"notes": "150 g",
+"allergies": {
+"id": "",
+"category": [],
+"ref": [],
+"details": ""
+},
+"alternative": "",
+"quality_characteristic": "",
+"image": ""
+},
+{
+"name": "salt",
+"quantity": {
+"measure": "0.5",
+"unit": "tsp"
+},
+"notes": "2 g",
+"allergies": {
+"id": "",
+"category": [],
+"ref": [],
+"details": ""
+},
+"alternative": "",
+"quality_characteristic": "",
+"image": ""
+},
+{
+"name": "baking powder",
+"quantity": {
+"measure": "2",
+"unit": "tsp"
+},
+"notes": "8 g",
+"allergies": {
+"id": "",
+"category": [],
+"ref": [],
+"details": ""
+},
+"alternative": "",
+"quality_characteristic": "fresh (not expired)",
+"image": ""
+},
+{
+"name": "cinnamon (batter)",
+"quantity": {
+"measure": "0.5",
+"unit": "tsp"
+},
+"notes": "1 g",
+"allergies": {
+"id": "",
+"category": [],
+"ref": [],
+"details": ""
+},
+"alternative": "",
+"quality_characteristic": "",
+"image": ""
+},
+{
+"name": "nutmeg",
+"quantity": {
+"measure": "0.5",
+"unit": "tsp"
+},
+"notes": "1 g",
+"allergies": {
+"id": "",
+"category": [],
+"ref": [],
+"details": ""
+},
+"alternative": "",
+"quality_characteristic": "freshly grated preferred",
+"image": ""
+},
+{
+"name": "canola oil",
+"quantity": {
+"measure": "0.333",
+"unit": "cup"
+},
+"notes": "≈75 g",
+"allergies": {
+"id": "",
+"category": [
+"vegetable oil"
+],
+"ref": [],
+"details": ""
+},
+"alternative": "neutral oil (vegetable, sunflower)",
+"quality_characteristic": "",
+"image": ""
+},
+{
+"name": "large egg",
+"quantity": {
+"measure": "1",
+"unit": ""
+},
+"notes": "",
+"allergies": {
+"id": "0x3eb1",
+"category": [
+"eggs"
+],
+"ref": [
+"[https://farrp.unl.edu/informalleggs](https://farrp.unl.edu/informalleggs)"
+],
+"details": ""
+},
+"alternative": "",
+"quality_characteristic": "large, room temperature",
+"image": ""
+},
+{
+"name": "milk (batter)",
+"quantity": {
+"measure": "0.333",
+"unit": "cup"
+},
+"notes": "78 ml (may add 1–2 Tbsp more if batter is thick)",
+"allergies": {
+"id": "",
+"category": [
+"dairy"
+],
+"ref": [],
+"details": ""
+},
+"alternative": "non-dairy milk (almond, soy)",
+"quality_characteristic": "room temperature",
+"image": ""
+},
+{
+"name": "vanilla extract (optional)",
+"quantity": {
+"measure": "0.5",
+"unit": "tsp"
+},
+"notes": "2 ml, optional",
+"allergies": {
+"id": "",
+"category": [],
+"ref": [],
+"details": ""
+},
+"alternative": "",
+"quality_characteristic": "pure vanilla preferred",
+"image": ""
+},
+{
+"name": "apple",
+"quantity": {
+"measure": "1",
+"unit": "large"
+},
+"notes": "rinsed, peeled optional, diced into small chunks",
+"allergies": {
+"id": "",
+"category": [
+"fruit"
+],
+"ref": [],
+"details": ""
+},
+"alternative": "2 small apples",
+"quality_characteristic": "firm, fresh; diced very small",
+"image": ""
+},
+{
+"name": "granulated sugar (crumble)",
+"quantity": {
+"measure": "0.5",
+"unit": "cup"
+},
+"notes": "100 g",
+"allergies": {
+"id": "",
+"category": [],
+"ref": [],
+"details": ""
+},
+"alternative": "",
+"quality_characteristic": "",
+"image": ""
+},
+{
+"name": "all-purpose flour (crumble)",
+"quantity": {
+"measure": "0.333",
+"unit": "cup"
+},
+"notes": "42 g",
+"allergies": {
+"id": "",
+"category": [
+"gluten"
+],
+"ref": [],
+"details": ""
+},
+"alternative": "",
+"quality_characteristic": "",
+"image": ""
+},
+{
+"name": "butter (softened)",
+"quantity": {
+"measure": "0.25",
+"unit": "cup"
+},
+"notes": "≈57 g, softened",
+"allergies": {
+"id": "",
+"category": [
+"dairy"
+],
+"ref": [],
+"details": ""
+},
+"alternative": "cold butter grated (gives coarser crumble)",
+"quality_characteristic": "softened, not melted",
+"image": ""
+},
+{
+"name": "ground cinnamon (crumble)",
+"quantity": {
+"measure": "1",
+"unit": "tsp"
+},
+"notes": "4 g",
+"allergies": {
+"id": "",
+"category": [],
+"ref": [],
+"details": ""
+},
+"alternative": "",
+"quality_characteristic": "",
+"image": ""
+}
+],
+"hasDairy": true,
+"hasMeat": false,
+"hasNuts": false,
+"prep_time": "15 minutes",
+"cook_time": "20-28 minutes (bake)",
+"serves": "12 muffins",
+"equipment": [
+"whisk",
+"large mixing bowl",
+"medium mixing bowl",
+"knife",
+"cutting board",
+"peeler",
+"fork",
+"spoon (silicone or wooden)",
+"muffin pan",
+"paper muffin cups",
+"wire rack",
+"oven"
+],
+"instructions": [
+{
+"original_text": "Preheat the oven to 400°F/205C.",
+"input_condition": [
+"have_oven"
+],
+"task": [
+{
+"action_name": "Preheat oven",
+"description": "Set oven temperature to 400°F (205°C) and allow to fully preheat.",
+"output_quality": [
+"Oven at stable 400°F/205°C"
+],
+"background_knowledge": {
+"tool": [
+"oven"
+],
+"failure": [
+"oven not preheated"
+]
+}
+}
+],
+"output_condition": [
+"oven_preheated_400F"
+],
+"modality": {
+"image": [],
+"video": ""
+}
+},
+{
+"original_text": "In a medium bowl, whisk together the flour, sugar, salt, baking powder, cinnamon, and nutmeg.",
+"input_condition": [
+"have_medium_mixing_bowl",
+"have_flour (batter)",
+"have_sugar (batter)",
+"have_salt",
+"have_baking_powder",
+"have_cinnamon",
+"have_nutmeg",
+"have_whisk"
+],
+"task": [
+{
+"action_name": "Combine dry ingredients",
+"description": "Add flour, granulated sugar, salt, baking powder, cinnamon, and nutmeg to a medium bowl and whisk until uniform.",
+"output_quality": [
+"Dry mix is homogeneous with no visible clumps"
+],
+"background_knowledge": {
+"tool": [
+"whisk",
+"medium mixing bowl"
+],
+"failure": [
+"uneven distribution of leavening",
+"visible clumps of flour or spices"
+]
+}
+}
+],
+"output_condition": [
+"dry_ingredient_mixture_ready"
+],
+"modality": {
+"image": [],
+"video": ""
+}
+},
+{
+"original_text": "In a large bowl, whisk together the egg, oil, milk, and vanilla extract. Then add the flour mixture and mix, using a silicone or wooden spoon. It may be a little thick; if so, add 1 to 2 additional Tbsp of milk.",
+"input_condition": [
+"have_large_mixing_bowl",
+"have_egg",
+"have_canola_oil",
+"have_milk",
+"have_vanilla_optional",
+"have_dry_ingredient_mixture_ready",
+"have_whisk",
+"have_spoon_silicone_or_wooden"
+],
+"task": [
+{
+"action_name": "Mix wet ingredients",
+"description": "Whisk the egg, oil, milk and vanilla (if using) in a large bowl until combined.",
+"output_quality": [
+"Wet mixture is smooth and even"
+],
+"background_knowledge": {
+"tool": [
+"whisk",
+"large mixing bowl"
+],
+"failure": [
+"egg not fully incorporated"
+]
+}
+},
+{
+"action_name": "Combine wet and dry",
+"description": "Add the dry mixture to the wet and fold/mix with a silicone or wooden spoon until just combined. If batter is too thick, add 1–2 Tbsp milk and mix to reach a scoopable muffin batter consistency.",
+"output_quality": [
+"Batter is uniform, scoopable, not overly loose",
+"No large pockets of dry flour remain"
+],
+"background_knowledge": {
+"tool": [
+"silicone or wooden spoon",
+"large mixing bowl"
+],
+"failure": [
+"overmixing (develops gluten)",
+"too thick or too thin batter"
+]
+}
+}
+],
+"output_condition": [
+"muffin_batter_ready_for_apples"
+],
+"modality": {
+"image": [],
+"video": ""
+}
+},
+{
+"original_text": "Rinse and dry your apple, then it is your choice whether you peel it or not. I usually peel mine. Next, chop it up into little chunks; the smaller the better. Add those chunks and fold them into the batter.",
+"input_condition": [
+"have_apple",
+"have_cutting_board",
+"have_knife",
+"have_peeler",
+"have_muffin_batter_ready_for_apples"
+],
+"task": [
+{
+"action_name": "Prepare apple",
+"description": "Rinse and dry the apple. Peel if desired. Core and dice into very small chunks.",
+"output_quality": [
+"Apple pieces are small (≈0.25-0.5 inch) and uniform"
+],
+"background_knowledge": {
+"tool": [
+"peeler",
+"knife",
+"cutting board"
+],
+"failure": [
+"apple pieces too large",
+"apple not dried (adds extra moisture)"
+]
+}
+},
+{
+"action_name": "Fold apples into batter",
+"description": "Gently fold the diced apples into the batter until evenly distributed. Do not overmix.",
+"output_quality": [
+"Apple chunks evenly distributed without overworked batter"
+],
+"background_knowledge": {
+"tool": [
+"spoon"
+],
+"failure": [
+"overmixing causes dense muffins"
+]
+}
+}
+],
+"output_condition": [
+"batter_with_diced_apples"
+],
+"modality": {
+"image": [],
+"video": ""
+}
+},
+{
+"original_text": "Now make the crumble or streusel topping. Add the softened butter to a medium bowl along with the sugar, flour, and cinnamon. Mix with a fork to make small to large clumps. Make sure there are no dry bits left",
+"input_condition": [
+"have_medium_mixing_bowl",
+"have_softened_butter",
+"have_sugar (crumble)",
+"have_flour (crumble)",
+"have_cinnamon (crumble)",
+"have_fork"
+],
+"task": [
+{
+"action_name": "Make crumble topping",
+"description": "Combine softened butter, sugar, flour and cinnamon in a medium bowl. Use a fork to mix until the mixture forms small-to-medium clumps with no dry flour visible.",
+"output_quality": [
+"Mixture forms clumps (streusel) and contains no dry powdery bits"
+],
+"background_knowledge": {
+"tool": [
+"fork",
+"medium mixing bowl"
+],
+"failure": [
+"streusel too powdery",
+"butter melted (should be softened, not liquid)"
+]
+}
+}
+],
+"output_condition": [
+"crumble_topping_ready"
+],
+"modality": {
+"image": [],
+"video": ""
+}
+},
+{
+"original_text": "Scoop the batter evenly into a muffin pan with paper cups. If you need a good nonstick muffin pan, the one I have is amazing.",
+"input_condition": [
+"have_batter_with_diced_apples",
+"have_muffin_pan",
+"have_paper_muffin_cups",
+"have_scoop_or_large_spoon"
+],
+"task": [
+{
+"action_name": "Portion batter into pan",
+"description": "Line muffin pan with paper cups (or grease). Scoop batter evenly into 12 wells, filling about 3/4 full.",
+"output_quality": [
+"Batter evenly distributed across 12 cups (approx equal volumes)"
+],
+"background_knowledge": {
+"tool": [
+"muffin pan",
+"scoop or large spoon",
+"paper muffin cups"
+],
+"failure": [
+"uneven fill - some cups overflow while others underfilled"
+]
+}
+}
+],
+"output_condition": [
+"muffin_pan_filled_with_batter"
+],
+"modality": {
+"image": [],
+"video": ""
+}
+},
+{
+"original_text": "Then sprinkle the crumble/streusel topping evenly on top.",
+"input_condition": [
+"have_muffin_pan_filled_with_batter",
+"have_crumble_topping_ready"
+],
+"task": [
+{
+"action_name": "Top muffins with crumble",
+"description": "Sprinkle or pinch crumble topping evenly over each filled muffin cup so each has a layer of streusel.",
+"output_quality": [
+"Topping is evenly distributed, visible on each muffin"
+],
+"background_knowledge": {
+"tool": [],
+"failure": [
+"some muffins with no topping",
+"topping clumps in one area"
+]
+}
+}
+],
+"output_condition": [
+"muffins_topped_with_streusel"
+],
+"modality": {
+"image": [],
+"video": ""
+}
+},
+{
+"original_text": "Bake at 400F/205C for 20 to 28 minutes until golden brown on top and a toothpick comes out clean when inserted in the middle of the muffin. In my oven, 25 minutes is usually enough time.",
+"input_condition": [
+"oven_preheated_400F",
+"muffins_topped_with_streusel",
+"have_oven_timer"
+],
+"task": [
+{
+"action_name": "Bake muffins",
+"description": "Place the muffin pan in the preheated oven. Bake at 400°F (205°C) for 20–28 minutes. At ~20 minutes begin checking: muffins are done when tops are golden and a toothpick inserted in center comes out clean or with a few moist crumbs.",
+"output_quality": [
+"Tops are golden-brown",
+"Toothpick inserted in center comes out clean or with a few moist crumbs",
+"Internal temperature (if measured) around 200°F is acceptable"
+],
+"background_knowledge": {
+"tool": [
+"oven",
+"toothpick or cake tester",
+"oven timer"
+],
+"failure": [
+"undercooked center",
+"overbrowned tops"
+]
+}
+}
+],
+"output_condition": [
+"baked_muffins"
+],
+"modality": {
+"image": [],
+"video": ""
+}
+},
+{
+"original_text": "Allow the muffins to cool in the pan for about 5 minutes, then transfer them to a wire rack to cool completely.",
+"input_condition": [
+"baked_muffins",
+"have_wire_rack"
+],
+"task": [
+{
+"action_name": "Cool in pan briefly",
+"description": "Remove pan from oven. Let muffins rest in the pan for about 5 minutes to set.",
+"output_quality": [
+"Muffins have slightly set and release easily from paper cups"
+],
+"background_knowledge": {
+"tool": [
+"oven mitts",
+"timer"
+],
+"failure": [
+"removing too soon causes muffins to break"
+]
+}
+},
+{
+"action_name": "Transfer to wire rack",
+"description": "Transfer muffins from pan to a wire rack and allow to cool completely before storing or serving.",
+"output_quality": [
+"Muffins cooled to room temperature on rack"
+],
+"background_knowledge": {
+"tool": [
+"wire rack",
+"spatula"
+],
+"failure": [
+"trapping steam under muffins (store after cooling)"
+]
+}
+}
+],
+"output_condition": [
+"muffins_cooled_on_rack"
+],
+"modality": {
+"image": [],
+"video": ""
+}
+},
+{
+"original_text": "Enjoy!",
+"input_condition": [
+"muffins_cooled_on_rack"
+],
+"task": [
+{
+"action_name": "Serve",
+"description": "Serve the cooled muffins. Store leftovers in an airtight container at room temperature for 2 days or refrigerate for longer storage.",
+"output_quality": [
+"Muffins ready to eat"
+],
+"background_knowledge": {
+"tool": [],
+"failure": []
+}
+}
+],
+"output_condition": [
+"recipe_complete"
+],
+"modality": {
+"image": [],
+"video": ""
+}
+}
+]
+}
