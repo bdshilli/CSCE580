@@ -1,0 +1,5 @@
+#!/home/bdshilli/Development/Github/CSCE580/env/bin/python3.13
+
+from idlelib.pyshell import main
+if __name__ == '__main__':
+    main()

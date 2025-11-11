@@ -1,0 +1,11 @@
+prefix=/home/bdshilli/Development/Github/CSCE580/env
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+toolexeclibdir=${libdir}
+includedir=/home/bdshilli/Development/Github/CSCE580/env/include
+
+Name: libffi
+Description: Library supporting Foreign Function Interfaces
+Version: 3.4.6
+Libs: -L${toolexeclibdir} -lffi
+Cflags: -I${includedir}

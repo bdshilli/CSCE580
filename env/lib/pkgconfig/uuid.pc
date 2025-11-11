@@ -1,0 +1,11 @@
+prefix=/home/bdshilli/Development/Github/CSCE580/env
+exec_prefix=/home/bdshilli/Development/Github/CSCE580/env
+libdir=/home/bdshilli/Development/Github/CSCE580/env/lib
+includedir=/home/bdshilli/Development/Github/CSCE580/env/include
+
+Name: uuid
+Description: Universally unique id library
+Version: 2.41.2
+Cflags: -I${includedir}/uuid
+Libs.private:  -lpthread
+Libs: -L${libdir} -luuid
