@@ -1,0 +1,9 @@
+data/raw_tif
+data/raw_project
+data/raw_arcgis
+data/tif_index.parquet
+data/arcgis_config.yaml
+data/processed_project
+data/__pycache__
+env/
+.venv
